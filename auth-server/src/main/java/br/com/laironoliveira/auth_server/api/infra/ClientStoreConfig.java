@@ -1,4 +1,4 @@
-package br.com.laironoliveira.auth_server.Configuration;
+package br.com.laironoliveira.auth_server.api.infra;
 
 import java.util.UUID;
 
@@ -23,7 +23,8 @@ public class ClientStoreConfig {
             .clientSecret("{noop}secret")
             .clientAuthenticationMethod(ClientAuthenticationMethod.CLIENT_SECRET_BASIC)
             .authorizationGrantType(AuthorizationGrantType.AUTHORIZATION_CODE)
-            .redirectUri("http://127.0.0.1:8080/login/oauth2/code/client-server")
+            .authorizationGrantType(AuthorizationGrantType.REFRESH_TOKEN)
+            .redirectUri("http://127.0.0.1:8080/login/oauth2/code/client-server-oidc")
             .scope(OidcScopes.OPENID)
             .scope(OidcScopes.PROFILE)
             .clientSettings(ClientSettings.builder().requireAuthorizationConsent(true).build())

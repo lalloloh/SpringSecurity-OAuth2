@@ -1,0 +1,9 @@
+spring:
+    security:
+        oauth2:
+            resourceserver:
+                jwt:
+                    issuer-uri: http://localhost:9000
+
+spring.output.ansi.enabled: always
+server.port: 9090
