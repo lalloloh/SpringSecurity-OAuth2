@@ -1,4 +1,4 @@
-package br.com.laironoliveira.auth_server;
+package br.com.laironoliveira.auth_server.Configuration;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
