@@ -9,6 +9,7 @@ import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 @Configuration
 public class UserStoreConfig {
     
+    // Pode ser implementado consulta em um banco apenas implementado um repository que estenda a classe UserDetails
     @Bean
     UserDetailsService userDetailsService() {
         var userDetailsManager = new InMemoryUserDetailsManager();

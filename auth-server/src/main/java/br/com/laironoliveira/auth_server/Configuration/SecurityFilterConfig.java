@@ -16,6 +16,7 @@ public class SecurityFilterConfig {
     @Order(1)
     SecurityFilterChain authServerSecurityFilterChain(HttpSecurity httpSecurity) throws Exception{
         
+        //TODO: Verificar instância nula do configurer
         httpSecurity.getConfigurer(OAuth2AuthorizationServerConfigurer.class)
             .oidc(Customizer.withDefaults());
 

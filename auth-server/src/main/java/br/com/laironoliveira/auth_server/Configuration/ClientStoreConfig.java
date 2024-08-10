@@ -15,6 +15,7 @@ import org.springframework.security.oauth2.server.authorization.settings.ClientS
 @Configuration
 public class ClientStoreConfig {
     
+    // Pode ser implementado consulta em um banco apenas implementado um repository que estenda a classe RegisteredClient
     @Bean
     RegisteredClientRepository registeredClientRepository(){
         var registeredClientRepository = RegisteredClient.withId(UUID.randomUUID().toString())
